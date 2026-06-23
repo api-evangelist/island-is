@@ -1,0 +1,74 @@
+aid: island-is
+name: island.is (Digital Iceland)
+description: >-
+  island.is (Stafrænt Ísland / Digital Iceland) is Iceland's national digital-services and government API
+  platform, operated by the Ministry of Finance and Economic Affairs / Digital Iceland. It provides a
+  GraphQL gateway at api.island.is (authentication-gated) that fronts internal REST microservices, with
+  business/government-to-government REST services described using OpenAPI 3.0 and registered in the X-Road
+  "Straumurinn" API Catalogue. The developer handbook is published at docs.devland.is. Iceland's former
+  CKAN open-data portal (opingogn.is) has been decommissioned and now redirects to island.is.
+kind: government
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+url: https://raw.githubusercontent.com/api-evangelist/island-is/refs/heads/main/apis.yml
+tags:
+  - Digital Government
+  - GraphQL
+  - OpenAPI
+  - X-Road
+  - API Platform
+  - Government Data
+  - National Government
+  - Iceland
+  - Europe
+created: '2026-06-23'
+modified: '2026-06-23'
+specificationVersion: '0.19'
+apis:
+  - aid: island-is:graphql
+    name: island.is GraphQL Gateway
+    description: >-
+      Single GraphQL gateway at api.island.is wrapping internal REST microservices that power island.is
+      applications. The gateway is authentication-gated (island.is identity server / IdS scopes) and
+      returns 404 to anonymous probes. API design conventions are documented in the Digital Iceland
+      handbook.
+    humanURL: https://docs.devland.is/
+    baseURL: https://api.island.is
+    tags:
+      - GraphQL
+      - API Gateway
+      - Authentication
+    properties:
+      - type: Documentation
+        url: https://docs.devland.is/
+      - type: x-graphql-endpoint
+        url: https://api.island.is
+      - type: x-graphql-conventions
+        url: https://docs.devland.is/technical-overview/api-design-guide/graphql-naming-conventions.md
+  - aid: island-is:xroad
+    name: X-Road (Straumurinn) API Catalogue
+    description: >-
+      Iceland's X-Road data-exchange layer (Straumurinn). Government-to-government REST services that
+      publish OpenAPI 3.0 descriptions are auto-imported into the X-Road API Catalogue, providing a
+      governed, discoverable surface of national government APIs.
+    humanURL: https://docs.devland.is/products/x-road.md
+    baseURL: https://docs.devland.is/products/x-road.md
+    tags:
+      - X-Road
+      - OpenAPI
+      - Interoperability
+      - B2G
+    properties:
+      - type: Documentation
+        url: https://docs.devland.is/products/x-road.md
+      - type: x-openapi-guide
+        url: https://docs.devland.is/development/openapi.md
+common:
+  - type: Website
+    url: https://island.is
+  - type: Documentation
+    url: https://docs.devland.is/
+  - type: Review
+    url: review.yml
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

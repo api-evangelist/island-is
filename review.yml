@@ -1,0 +1,25 @@
+name: island.is
+description: island.is / Digital Iceland national API platform assessment for APIs.json cataloging.
+url: https://raw.githubusercontent.com/api-evangelist/island-is/refs/heads/main/review.yml
+created: '2026-06-23'
+modified: '2026-06-23'
+reviews:
+  - date: '2026-06-23'
+    rating: 4
+    summary: >-
+      island.is (Digital Iceland) is the live, governed national government API platform: a GraphQL
+      gateway at api.island.is (auth-gated) fronting internal REST microservices, with B2G REST services
+      described in OpenAPI 3.0 and registered in the X-Road "Straumurinn" API Catalogue, all documented in
+      the public developer handbook at docs.devland.is. Iceland's former CKAN open-data portal opingogn.is
+      is decommissioned — it 301-redirects to island.is and its CKAN Action API returns 404 — so island.is
+      is the correct primary entry. The GraphQL gateway returned 404 to anonymous probes (requires IdS auth).
+    endpoints:
+      - url: https://docs.devland.is/
+        status: 200
+        note: Public developer handbook (Digital Iceland), live.
+      - url: https://api.island.is
+        status: 404
+        note: GraphQL gateway; auth-gated, returns 404 to anonymous requests.
+      - url: https://opingogn.is/
+        status: 301
+        note: Former CKAN open-data portal; now redirects into island.is (decommissioned).
