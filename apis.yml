@@ -63,6 +63,8 @@ apis:
       - type: x-openapi-guide
         url: https://docs.devland.is/development/openapi.md
 common:
+  - type: DomainSecurity
+    url: security/island-is-domain-security.yml
   - type: Website
     url: https://island.is
   - type: Documentation
