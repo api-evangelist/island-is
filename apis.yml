@@ -8,6 +8,17 @@ description: >-
   "Straumurinn" API Catalogue. The developer handbook is published at docs.devland.is. Iceland's former
   CKAN open-data portal (opingogn.is) has been decommissioned and now redirects to island.is.
 kind: government
+deliveryModel:
+  model: unknown
+  open_source: false
+  commercial: false
+  callable_host: false
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - none
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: unknown
