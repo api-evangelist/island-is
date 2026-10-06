@@ -46,7 +46,7 @@ tags:
   - Iceland
   - Europe
 created: '2026-06-23'
-modified: '2026-06-23'
+modified: '2026-10-06'
 specificationVersion: '0.23'
 apis:
   - aid: island-is:graphql
@@ -88,6 +88,8 @@ apis:
       - type: x-openapi-guide
         url: https://docs.devland.is/development/openapi.md
 common:
+  - url: https://island.is/rss.xml
+    type: BlogRSS
   - type: DomainSecurity
     url: security/island-is-domain-security.yml
   - type: Website
